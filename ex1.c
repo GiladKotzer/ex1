@@ -22,7 +22,7 @@ int main() {
   printf("Please enter a position: \n");
   scanf("%d", &pos);
   res = (num & (1 << pos)) >> pos;
-  printf("The bit in pos %d of number %d is: %d\n", pos, num, res);
+  printf("The bit in position %d of number %d is: %d\n", pos, num, res);
 
   // Set bit
   printf("\nSet bit:\n");
@@ -70,12 +70,12 @@ int main() {
   sum them up and print the result in hexadecimal base
   Print only 4 bits, in positions: 3,5,7,11 in the result. */
 
-  printf("Please enter the fiest number (octal): \n");
+  printf("Please enter the first number (octal): \n");
   scanf("%o", &num1);
   printf("Please enter the second number (octal): \n");
   scanf("%o", &num2);
   res1 = num1 + num2;
-  printf("The sum in hexsadecimal: %X\n", res1);
+  printf("The sum in hexadecimal: %X\n", res1);
   res2 = ((res1 & (1 << 3)) >> 3) * 1000 + ((res1 & (1 << 5)) >> 5) * 100 + ((res1 & (1 << 7)) >> 7) * 10 + ((res1 & (1 << 11)) >> 11);
   printf("The 3,5,7,11 bits are: %d\n", res2);
 
