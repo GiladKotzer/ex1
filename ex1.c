@@ -10,7 +10,7 @@ Assignment: ex1
 int main() {
   
   
-  int num, num1, num2, pos, res, res1, res2;
+  int num, num1, num2, pos, res, res1, res2, c1, c2, c3, c4;
 
   // What bit
   printf("What bit:\n");
@@ -76,8 +76,13 @@ int main() {
   scanf("%o", &num2);
   res1 = num1 + num2;
   printf("The sum in hexadecimal: %X\n", res1);
-  res2 = ((res1 & (1 << 3)) >> 3) * 1000 + ((res1 & (1 << 5)) >> 5) * 100 + ((res1 & (1 << 7)) >> 7) * 10 + ((res1 & (1 << 11)) >> 11);
-  printf("The 3,5,7,11 bits are: %d\n", res2);
+  // res2 = ((res1 & (1 << 3)) >> 3) * 1000 + ((res1 & (1 << 5)) >> 5) * 100 + ((res1 & (1 << 7)) >> 7) * 10 + ((res1 & (1 << 11)) >> 11);
+  c1 = (res1 & (1 << 3)) >> 3;
+  c2 = (res1 & (1 << 5)) >> 5;
+  c3 = (res1 & (1 << 7)) >> 7;
+  c4 = (res1 & (1 << 11)) >> 11;
+  // printf("The 3,5,7,11 bits are: %d\n", res2);
+  printf("The 3,5,7,11 bits are: %d%d%d%d\n", c1,c2,c3,c4);
 
 
   printf("Bye!\n");
